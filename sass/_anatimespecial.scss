@@ -1,0 +1,84 @@
+.align-end {
+    align-self: flex-end;
+    border-radius: em(4);
+
+}
+
+.list-line {
+    border-bottom: 1px solid $border-inside-box;
+    padding: em(10) 0;
+}
+
+.col {
+    p {
+        @extend %avenir;
+        color: $textcolor;
+        font-size: em(11);
+        @include media($tablet-land) {
+            font-size: em(15);
+        }
+
+
+        &.label {
+            @extend %avenir-medium;
+            color: $accent;
+            font-size: em(12);
+            @include media($tablet-land) {
+                font-size: em(15);
+            }
+        }
+    }
+}
+
+.total {
+    @extend %avenir-demibold;
+    box-sizing: border-box;
+    color: $black;
+    font-size: em(13);
+    padding: em(12);
+    text-align: right;
+    @include media($tablet-land) {
+        font-size: em(15);
+
+    }
+}
+
+.icon-label {
+    position: absolute;
+    right: 8px;
+}
+
+.wrapper {
+    .row {
+        .top-margin {
+            margin-top: em(10);
+        }
+
+        .bot-margin {
+            margin-bottom: em(10);
+        }
+    }
+}
+
+.chooser {
+    background-color: $white;
+    border: 1px solid $border-layout;
+    box-sizing: border-box;
+    margin: em(10) auto;
+    max-width: 320px;
+    padding: em(20);
+
+    h2 {
+        @extend %avenir;
+        background-color: $white;
+        border-bottom: 1px solid $black;
+        color: $black;
+        cursor: pointer;
+        font-size: em(17);
+        justify-content: space-between;
+        margin: 0 0 em(15);
+        padding: em(8) em(0) em(16);
+        text-transform: none;
+        width: 90%;
+    }
+}

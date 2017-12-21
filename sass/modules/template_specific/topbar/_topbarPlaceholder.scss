@@ -1,0 +1,146 @@
+%navigation {
+    background-color: $black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    max-height: em(65);
+    padding: 0;
+    width: 100%;
+
+
+    @include media($tablet-land) {
+        border-top-left-radius: em(10);
+        border-top-right-radius: em(10);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: em(15);
+        max-height: em(98);
+        width: 90%;
+    }
+
+
+    .row {
+        margin-top: 0;
+
+        .col {
+            padding: 0;
+
+            .hamburger-menu {
+                background-color: $accent-light;
+                padding: em(20);
+                text-align: center;
+                width: auto;
+
+                .burger {
+                    color: $white;
+                    cursor: pointer;
+                    font-size: em(24);
+                }
+
+            }
+
+            .logo {
+                background-color: $accent-light;
+                border-top-left-radius: em(10);
+                box-sizing: border-box;
+                height: em(98);
+                max-height: em(98);
+                max-width: 100%;
+                padding: 0 em(20);
+
+
+                img {
+                    max-width: 100%;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
+            }
+
+            .bar-right {
+                align-items: center;
+                height: em(65);
+                justify-content: space-evenly;
+                width: 100%;
+                @include media($tablet-land) {
+                    height: em(98);
+                    justify-content: space-between;
+
+                }
+
+                .menu-top {
+                    display: none;
+                    @include media($tablet-land) {
+                        align-items: center;
+                        display: flex;
+                    }
+
+                    a {
+                        @extend %avenir-medium;
+                        border-right: 1px solid $white;
+                        color: $white;
+                        cursor: pointer;
+                        font-size: em(14);
+                        padding: em(14) em(17);
+                        text-decoration: none;
+
+                        &:last-child {
+                            border-right: 0;
+                        }
+
+                        span {
+                            font-size: em(17);
+                            padding-right: em(14);
+                        }
+                    }
+                }
+
+                .button-header {
+                    @extend %avenir-demibold;
+                    align-self: center;
+                    border-radius: em(4);
+                    font-size: em(12);
+                    padding: em(25) em(10);
+                    text-shadow: none;
+                    width: em(160);
+
+                    .plus-icon {
+                        color: $white;
+                        font-size: em(15);
+                        padding: em(3);
+                    }
+                }
+
+                .profile {
+                    align-items: center;
+                    align-self: flex-end;
+
+                    @include media ($tablet-land) {
+                        padding-right: em(20);
+                    }
+
+                    .profile-name {
+                        @extend %avenir-heavy;
+                        color: $white;
+                        font-size: em(10);
+                        font-weight: 900;
+                        padding-right: em(10);
+                    }
+
+                    .profile-image {
+                        background-image: url('../images/walter@2x.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        height: em(50);
+                        width: em(50);
+                    }
+                }
+            }
+        }
+    }
+}

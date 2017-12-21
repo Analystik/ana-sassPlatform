@@ -1,0 +1,61 @@
+.enbref {
+    @extend %accordion-icon;
+    background-color: $white;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    padding: em(15) em(30);
+
+    div {
+        display: none;
+    }
+
+
+    & > h2 {
+        @extend %avenir;
+        background-color: $white;
+        border-bottom: 1px solid $black;
+        color: $black;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        font-size: em(23);
+        justify-content: space-between;
+        margin: 0;
+        padding: em(8) em(10) em(16);
+        text-transform: none;
+        width: 100%;
+
+
+        .icon {
+            color: $black;
+            font-size: em(13);
+            transform: rotate(0);
+            transform-origin: center;
+            transition: transform .3s ease-in-out;
+        }
+    }
+
+    &.open {
+        .icon {
+            transform: rotate(180deg);
+        }
+
+        div {
+            display: flex;
+            margin: em(20) 0;
+
+            p {
+                @extend %avenir;
+                color: $black;
+                font-size: em(16);
+
+
+                &.label-bref {
+                    color: $accent;
+                    font-size: em(18);
+
+                }
+            }
+        }
+    }
+}

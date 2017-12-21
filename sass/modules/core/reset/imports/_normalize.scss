@@ -1,0 +1,222 @@
+$normalize-transparent: rgba(0, 0, 0, 0);
+$normalize-mark: #ff0;
+$black: #000;
+
+
+$with-flavor: false !default;
+
+
+html {
+    //sass-lint:disable no-vendor-prefixes
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    //sass-lint:enable no-vendor-prefixes
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+
+    @if ($with-flavor) {
+        //sass-lint:disable no-vendor-prefixes
+        -webkit-tap-highlight-color: $normalize-transparent;
+        //sass-lint:enable no-vendor-prefixes
+        box-sizing: border-box;
+  }
+ }
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+
+audio {
+    &:not([controls]) {
+        display: none;
+        height: 0;
+    }
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+
+a {
+    background-color: transparent;
+
+    &:active,
+    &:hover {
+        outline: 0;
+  }
+}
+
+
+abbr {
+    &[title] {
+        border-bottom: 1px dotted;
+
+        @if ($with-flavor) {
+            cursor: help;
+      }
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+
+dfn,
+i,
+em {
+    font-style: italic;
+}
+
+
+mark {
+    background: $normalize-mark;
+    color: $black;
+}
+
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+
+img {
+    border: 0;
+}
+
+svg {
+    &:not(:root) {
+        overflow: hidden;
+    }
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+button {
+    overflow: visible;
+
+    &[disabled] {
+        cursor: default;
+  }
+
+    //sass-lint:disable no-vendor-prefixes
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+  }
+}
+//sass-line:enable no-vendor-prefixes
+
+button,
+select {
+    text-transform: none;
+}
+
+
+button,
+html {
+    & input {
+        &[type='button'],
+        &[type='reset'],
+        &[type='submit'] {
+            appearance: button;
+            cursor: pointer;
+        }
+    }
+}
+
+input {
+    line-height: normal;
+
+    &[disabled] {
+        cursor: default;
+    }
+
+    //sass-lint:disable no-vendor-prefixes
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &[type='number' ]{
+        &::-webkit-inner-spin-button,
+        &::-webkit-inner-spin-button {
+            height: auto;
+        }
+    }
+
+    &[type='search'] {
+        -webkit-appearance: none;
+
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        //sass-lint:enable no-vendor-prefixes
+
+        &[type='checkbox'],
+        &[type='radio'] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+    }
+}
+
+textarea {
+    overflow: auto;
+}
+
+
+optgroup {
+    font-weight: bold;
+}

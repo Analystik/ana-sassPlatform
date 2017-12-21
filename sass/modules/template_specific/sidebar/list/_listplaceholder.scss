@@ -1,0 +1,22 @@
+%list {
+    list-style: none;
+
+    li {
+        padding-left: em(30);
+        padding-top: em(5);
+
+        a {
+            @extend %avenir;
+            color: $sidebar-link;
+            cursor: pointer;
+            font-size: em(15);
+            text-decoration: none;
+
+            &:hover,
+            &.selected {
+                @extend %avenir-medium;
+                color: $sidebar-link-hover;
+            }
+        }
+    }
+}

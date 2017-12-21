@@ -1,0 +1,47 @@
+.login {
+    @include cover-image('../images/bg/bg', jpg, cover);
+}
+
+.inside {
+    @include cover-image('../images/bg/bg-blur', jpg, cover);
+}
+
+.wrapper {
+    background-color: $white;
+    margin: 0;
+    width: 100%;
+    @include media($tablet-land) {
+        margin: 0 auto em(15);
+        width: 90%;
+    }
+
+    .row {
+        margin-top: 0;
+    }
+}
+
+
+.sidebar {
+    border-right: 1px solid $border-layout;
+    display: none;
+    padding: 0;
+
+
+    &.xsmall {
+        padding: 0;
+    }
+
+    @include media($tablet-land) {
+        align-content: flex-start;
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+section {
+    &.col {
+        padding: 0;
+    }
+    
+}

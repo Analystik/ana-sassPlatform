@@ -1,0 +1,59 @@
+%checkbox {
+    @include flexbox(row, wrap, flex-start, flex-start);
+
+    label {
+        @extend %label;
+        display: flex;
+        padding-left: em(15);
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+    }
+
+    > input {
+        &[type='checkbox'] {
+            display: none;
+
+            + label {
+                @extend %label;
+                align-items: center;
+                background: $white;
+                border: 1px solid $input-border;
+                border-radius: em(4);
+                cursor: pointer;
+                display: flex;
+                height: 1em;
+                min-width: 0;
+                padding: 0;
+                transition: background-color .1s ease-in-out;
+                width: 1em;
+
+
+                &::before {
+                    color: $white;
+                    content: '✓';
+                    font-size: 0;
+                    margin: 1px auto 0;
+                    transition: font-size .2s ease-in-out;
+
+                }
+
+            }
+
+            &:checked + label {
+                background-color: $accent;
+
+                &::before {
+                    content: '✓';
+                    font-size: ms(0);
+                }
+            }
+
+            &:disabled + label {
+                background-color: $disabled;
+            }
+        }
+    }
+}

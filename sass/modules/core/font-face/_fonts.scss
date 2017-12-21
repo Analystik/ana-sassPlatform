@@ -1,0 +1,72 @@
+//sass-lint:disable property-sort-order
+//sass-lint:disable no-duplicate-properties
+
+@font-face {
+    font-family: 'Avenir Next Demi';
+    src: url('../font/hinted-AvenirNext-DemiBold.eot'),
+    url('../font/hinted-AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/hinted-AvenirNext-DemiBold.woff2') format('woff2'),
+    url('../font/hinted-AvenirNext-DemiBold.woff') format('woff'),
+    url('../font/hinted-AvenirNext-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../font/hinted-AvenirNext-Regular.eot'),
+    url('../font/hinted-AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/hinted-AvenirNext-Regular.woff2') format('woff2'),
+    url('../font/hinted-AvenirNext-Regular.woff') format('woff'),
+    url('../font/hinted-AvenirNext-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../font/hinted-AvenirNext-Heavy.eot'),
+    url('../font/hinted-AvenirNext-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../font/hinted-AvenirNext-Heavy.woff2') format('woff2'),
+    url('../font/hinted-AvenirNext-Heavy.woff') format('woff'),
+    url('../font/hinted-AvenirNext-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Avenir Next Ultra';
+//     src: url('../font/hinted-AvenirNext-UltraLight.eot');
+//     src: local('AvenirNext-UltraLight'),
+//     url('../font/hinted-AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'),
+//     url('../font/hinted-AvenirNext-UltraLight.woff2') format('woff2'),
+//     url('../font/hinted-AvenirNext-UltraLight.woff') format('woff'),
+//     url('../font/hinted-AvenirNext-UltraLight.ttf') format('truetype');
+//     font-weight: 200;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../font/hinted-AvenirNext-Medium.eot'),
+    url('../font/hinted-AvenirNext-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/hinted-AvenirNext-Medium.woff2') format('woff2'),
+    url('../font/hinted-AvenirNext-Medium.woff') format('woff'),
+    url('../font/hinted-AvenirNext-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../font/hinted-AvenirNext-Bold.eot'),
+    url('../font/hinted-AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/hinted-AvenirNext-Bold.woff2') format('woff2'),
+    url('../font/hinted-AvenirNext-Bold.woff') format('woff'),
+    url('../font/hinted-AvenirNext-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+//sass-lint:enable property-sort-order
+//sass-lint:enable no-duplicate-properties

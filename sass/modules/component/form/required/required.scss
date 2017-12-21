@@ -1,0 +1,14 @@
+.required {
+    position: relative;
+
+    &::after {
+        color: $alert;
+        content: '*';
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: ms(1);
+        height: em(11);
+        position: absolute;
+        width: em(10);
+    }
+}

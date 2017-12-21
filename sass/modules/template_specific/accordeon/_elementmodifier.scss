@@ -1,0 +1,33 @@
+.accordeon {
+    @extend %accordion-icon;
+    background-color: $disabled;
+
+
+    & > h2 {
+        @extend %titletemplate;
+        background-color: $disabled;
+        background-image: none;
+        color: $textcolor;
+        cursor: pointer;
+        font-weight: 300;
+        height: em(56);
+        margin: 0;
+        padding: em(16);
+        padding-bottom: em(16);
+        text-transform: none;
+
+        &i {
+            transform: rotate(0);
+            transform-origin: center;
+            transition: transform .3s ease-in-out;
+        }
+    }
+
+    &.open {
+        h2 {
+            &i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

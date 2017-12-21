@@ -1,0 +1,19 @@
+%label {
+    @extend %avenir-medium;
+    color: $accent;
+    display: flex;
+    flex: 0 0 auto;
+    font-size: em(12);
+    margin: 0;
+    padding-bottom: em(2);
+    padding-left: 0;
+    padding-right: .5em;
+    padding-top: .5em;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+    @include media($tablet-land) {
+        font-size: em(15);
+    }
+}

@@ -1,0 +1,88 @@
+%infobox {
+    background-color: $title-bar;
+    border: 0;
+    margin: em(10) 0;
+    min-width: em(320);
+    padding: 0;
+    width: 100%;
+
+
+    &:last-child {
+        margin: em(10) 0 0;
+     }
+
+    @include media($tablet-land) {
+        border: 1px solid $input-border;
+        margin: em(30) 0;
+
+        &:last-child {
+            margin: em(30) 0 0;
+         }
+        }
+
+    .header {
+        background-color: $accent;
+        box-sizing: border-box;
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: em(10);
+        position: relative;
+        width: 100%;
+
+
+
+        .infotitle {
+            @extend %avenir-demibold;
+            font-size: em(12);
+            padding: em(8);
+            @include media($tablet-land) {
+                font-size: em(15);
+                padding: em(12) em(7);
+            }
+        }
+
+        &::before {
+            border-bottom: 0 solid transparent;
+            border-left: em(10) solid transparent;
+            border-right: em(10) solid transparent;
+            border-top: em(10) solid $accent;
+            bottom: em(-8);
+            content: '\A';
+            left: em(8);
+            position: absolute;
+
+        }
+
+    }
+
+    p {
+        color: $textcolor;
+        line-height: 1.6;
+        margin-left: em(8);
+
+        &.title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: $accent;
+
+            &:hover {
+                color: lighten($accent, 10%);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    hr {
+        border-top: 1px solid $input-border;
+        width: 100%;
+    }
+
+    .labeltxt {
+        color: $accent;
+    }
+}

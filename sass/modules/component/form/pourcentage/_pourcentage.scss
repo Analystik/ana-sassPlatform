@@ -1,0 +1,12 @@
+%pourcent {
+    @extend %currency;
+
+
+    &>label {
+        &::after {
+            content: '%';
+        }
+
+    }
+
+}

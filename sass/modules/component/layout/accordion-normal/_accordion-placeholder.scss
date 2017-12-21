@@ -1,0 +1,33 @@
+%accordion {
+    background-color: $accent;
+    display: block;
+
+    &> h2 {
+        @extend %avenir;
+        background-color: transparent;
+        box-sizing: border-box;
+        color: $white;
+        display: inline-block;
+        font-size: ms(2);
+        height: em(20);
+        margin: em(5) 0 0;
+        padding: 0 em(10);
+        padding-bottom: em(15);
+        position: relative;
+        text-transform: uppercase;
+        width: 100%;
+
+    }
+
+    & > .col,
+    .row {
+        display: none;
+    }
+
+    &.open {
+        & > .col,
+        .row {
+            display: flex;
+        }
+    }
+}

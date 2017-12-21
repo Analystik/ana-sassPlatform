@@ -1,0 +1,22 @@
+button {
+    @include button($accent-light, $accent, square);
+
+    &[type='submit'] {
+        @include button($accent-light, $accent, square);
+    }
+
+    &.grayed {
+        @include button(grayscale($accent-light), grayscale($accent), square);
+    }
+}
+
+input {
+    &[type='submit'] {
+        @include button($accent-light, $accent, square);
+    }
+}
+
+
+%button-squared {
+    @include button($accent-light, $accent, square)
+}

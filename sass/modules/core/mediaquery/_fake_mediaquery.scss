@@ -1,0 +1,15 @@
+.desktop-only {
+    display: none;
+
+    @include media($tablet-land) {
+        display: block;
+    }
+}
+
+.mobile-only {
+    display: block;
+
+    @include media($tablet-land) {
+        display: none;
+    }
+}

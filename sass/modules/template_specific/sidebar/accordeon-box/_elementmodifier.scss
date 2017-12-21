@@ -1,0 +1,5 @@
+.col {
+    &.accordeon-box {
+        @extend %accbox;
+    }
+}

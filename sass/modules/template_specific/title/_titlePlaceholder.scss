@@ -1,0 +1,19 @@
+%titletemplate {
+    @extend %avenir-bold;
+    background-color: $title-bar;
+    box-sizing: border-box;
+    color: $dark-text;
+    font-size: em(15);
+    height: auto;
+    margin: 0;
+    padding: em(6) em(14);
+    text-transform: none;
+    width: 100%;
+
+    @include media($tablet-land) {
+        font-size: em(23);
+        padding: em(11) em(21);
+
+
+    }
+}

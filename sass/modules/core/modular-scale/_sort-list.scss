@@ -1,0 +1,92 @@
+// List sorting via a modified merge-sort algorythmn
+// http://en.wikipedia.org/wiki/Merge_sort
+
+@function ms-merge($a, $b) {
+
+    $return: ();
+
+    // Some empty lists get passed through
+    // so just pass the other list throguh
+    @if length($a) == 0 {
+        @return $b;
+  }
+
+    // If lists fit next to each other, just merge them
+    // This helps performance skipping the need to check each value
+    @if nth($a, length($a)) < nth($b, 1) {
+        @return join($a, $b);
+      }
+    @if nth($b, length($b)) < nth($a, 1) {
+        @return join($b, $a);
+  }
+
+    // Counters start at 1
+    $a-counter: 1;
+    $b-counter: 1;
+
+    // Start looping through all numbers in array
+    @while $a-counter <= length($a) and $b-counter <= length($b) {
+
+        // Check if the A value is smaller
+        // Uses or equal to avoid duplicate numbers
+        @if nth($a, $a-counter) <= nth($b, $b-counter) {
+            $return: join($return, nth($a, $a-counter));
+            $a-counter: $a-counter + 1;
+    }
+
+        // Check if the B value is smaller
+        @else if nth($a, $a-counter) > nth($b, $b-counter) {
+            $return: join($return, nth($b, $b-counter));
+            $b-counter: $b-counter + 1;
+    }
+  }
+
+    // Run through remainder values in the list
+    @while $a-counter <= length($a) {
+        $current: nth($a, $a-counter);
+        @if $current != nth($return, length($return)) {
+            $return: join($return, $current);
+        }
+        $a-counter: $a-counter + 1;
+      }
+    @while $b-counter <= length($b) {
+        $current: nth($b, $b-counter);
+        @if $current != nth($return, length($return)) {
+            $return: join($return, $current);
+        }
+        $b-counter: $b-counter + 1;
+      }
+
+    // Done! return is now sorted and complete
+    @return $return;
+}
+
+
+
+// Pull it all together
+@function ms-sort-list($lists) {
+
+    $return: ();
+
+    @each $list in $lists {
+        @if $return == () {
+            $return: $list;
+        } @else {
+            $return: ms-merge($list, $return);
+        }
+      }
+
+
+    $last: null;
+    $new-list: ();
+    @each $item in $return {
+        @if $item != $last {
+            $new-list: join($new-list, $item);
+        }
+        $last: $item;
+      }
+    $return: $new-list;
+
+
+    @return $return;
+}

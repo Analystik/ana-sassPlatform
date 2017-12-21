@@ -1,0 +1,7 @@
+@mixin lineheight($array, $size) {
+    @for $i from 1 through $size {
+        &.line#{$i} {
+            height: #{nth($array, $i)};
+         }
+    }
+}

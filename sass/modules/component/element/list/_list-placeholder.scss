@@ -1,0 +1,103 @@
+%table {
+    @include flexbox(column, no-wrap, space-between);
+    border: 1px solid $input-border;
+    font-family: sans-serif;
+    font-size: ms(0);
+    position: relative;
+    width: 99.8%;
+
+    .head {
+        @include flexbox;
+        background-color: $accent;
+        border-bottom: 1px solid $input-border;
+        box-sizing: border-box;
+        padding: em(5) 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        > .col {
+            @extend %item;
+            border-right: 1px solid $white;
+            color: $white;
+            padding-left: em(10);
+            text-align: left;
+            text-shadow: 0 em(1) em(1) $bs22;
+
+            //sass-lint:disable mixins-before-declarations
+            @include setflex($sizearray, $lensize);
+            //sass-lint:enable mixins-before-declarations
+
+            &:first-child {
+                margin-left: em(10);
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    .listbody {
+        display: block;
+        height: em(33);
+        overflow-y: auto;
+        padding-top: em(16);
+        width: 100%;
+
+        //sass-lint:disable mixins-before-declarations
+        @include lineheight($linearray, $lenline);
+        //sass-lint:enable mixins-before-declarations
+
+        .row {
+            @include flexbox;
+            box-sizing: border-box;
+            padding-top: em(5);
+            text-decoration: none;
+            width: 100%;
+
+            &.selected-row {
+                background-color: $selection;
+            }
+
+            &:hover {
+                background-color: lighten($selection, 10%);
+                cursor: pointer;
+            }
+
+            > .col {
+                @extend %item;
+
+                //sass-lint:disable mixins-before-declarations
+                @include setflex($sizearray, $lensize);
+                //sass-lint:enable mixins-before-declarations
+
+                &.left {
+                    justify-content: flex-start;
+                    text-align: left;
+                }
+
+                &.right {
+                    justify-content: flex-end;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+%item {
+    @include flexbox(row, nowrap, center);
+    flex: 1 0 0;
+    padding: 0 em(10);
+    text-align: center;
+    word-break: break-word;
+
+    &:first-child {
+        margin-left: em(20);
+    }
+
+    &.left {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,32 @@
+@viewport {
+    width: device-width;
+}
+
+
+//sass-lint:disable no-universal-selectors
+* {
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+//sass-lint:enable no-universal-selectors
+
+
+[role='button'] {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
