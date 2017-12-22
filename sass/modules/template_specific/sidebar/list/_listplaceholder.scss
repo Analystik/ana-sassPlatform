@@ -3,14 +3,19 @@
 
     li {
         padding-left: em(30);
+        padding-right: em(5);
         padding-top: em(5);
+
 
         a {
             @extend %avenir;
             color: $sidebar-link;
             cursor: pointer;
-            font-size: em(15);
+            font-size: em(12);
             text-decoration: none;
+            @include media($tablet-land) {
+                font-size: em(15);
+            }
 
             &:hover,
             &.selected {

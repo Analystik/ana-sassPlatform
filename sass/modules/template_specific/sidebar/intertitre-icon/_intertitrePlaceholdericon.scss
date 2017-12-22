@@ -3,9 +3,12 @@
     align-self: left;
     color: $sidebar-link-hover;
     flex: 0 0 90%;
-    font-size: em(16);
+    font-size: em(12);
     margin-top: em(26);
     padding: em(6) em(16);
+    @include media($tablet-land) {
+        font-size: em(16);
+    }
 
     span {
         padding-right: em(13);

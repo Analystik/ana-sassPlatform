@@ -10,7 +10,7 @@
     width: 100%;
 
 
-    @include media($tablet-land) {
+    @include media($tablet-portrait) {
         border-top-left-radius: em(10);
         border-top-right-radius: em(10);
         margin-left: auto;
@@ -65,7 +65,7 @@
                 height: em(65);
                 justify-content: space-evenly;
                 width: 100%;
-                @include media($tablet-land) {
+                @include media($tablet-portrait) {
                     height: em(98);
                     justify-content: space-between;
 
@@ -73,7 +73,7 @@
 
                 .menu-top {
                     display: none;
-                    @include media($tablet-land) {
+                    @include media($tablet-portrait) {
                         align-items: center;
                         display: flex;
                     }
@@ -83,9 +83,12 @@
                         border-right: 1px solid $white;
                         color: $white;
                         cursor: pointer;
-                        font-size: em(14);
+                        font-size: em(11);
                         padding: em(14) em(17);
                         text-decoration: none;
+                        @include media($tablet-land) {
+                            font-size: em(14);
+                        }
 
                         &:last-child {
                             border-right: 0;
@@ -103,9 +106,14 @@
                     align-self: center;
                     border-radius: em(4);
                     font-size: em(12);
+                    margin-left: 28%;
                     padding: em(25) em(10);
                     text-shadow: none;
                     width: em(160);
+                    @include media($tablet-portrait) {
+                        margin-left: 0;
+                    }
+
 
                     .plus-icon {
                         color: $white;
@@ -119,7 +127,11 @@
                     align-self: flex-end;
 
                     @include media ($tablet-land) {
+                        display: flex;
+                        flex-direction: row;
                         padding-right: em(20);
+
+
                     }
 
                     .profile-name {

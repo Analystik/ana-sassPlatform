@@ -11,7 +11,7 @@
         margin: em(10) 0 0;
      }
 
-    @include media($tablet-land) {
+    @include media($tablet-portrait) {
         border: 1px solid $input-border;
         margin: em(30) 0;
 

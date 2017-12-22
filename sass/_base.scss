@@ -10,7 +10,7 @@
     background-color: $white;
     margin: 0;
     width: 100%;
-    @include media($tablet-land) {
+    @include media($tablet-portrait) {
         margin: 0 auto em(15);
         width: 90%;
     }
@@ -31,7 +31,7 @@
         padding: 0;
     }
 
-    @include media($tablet-land) {
+    @include media($tablet-portrait) {
         align-content: flex-start;
         align-self: stretch;
         display: flex;
@@ -43,5 +43,5 @@ section {
     &.col {
         padding: 0;
     }
-    
+
 }

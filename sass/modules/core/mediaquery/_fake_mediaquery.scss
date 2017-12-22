@@ -6,10 +6,18 @@
     }
 }
 
+.tablet-and-up {
+    display: none;
+
+    @include media($tablet-portrait) {
+        display: block;
+    }
+}
+
 .mobile-only {
     display: block;
 
-    @include media($tablet-land) {
+    @include media($tablet-portrait) {
         display: none;
     }
 }
