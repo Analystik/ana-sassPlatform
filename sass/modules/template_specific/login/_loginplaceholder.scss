@@ -1,0 +1,30 @@
+%login {
+    background-color: $white;
+    border-radius: em(8);
+    box-shadow: 0 0 45px transparentize($black, .5);
+    box-sizing: border-box;
+    left: 50%;
+    padding: em(15);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    @include media($tablet-portrait) {
+        width: 70%;
+    }
+    @include media($desktop) {
+        width: 55%;
+    }
+
+    img {
+        height: auto;
+        margin-bottom: em(15);
+        width: 60%;
+    }
+
+    input {
+        height: 2.25em;
+        width: 50%;
+    }
+
+}
