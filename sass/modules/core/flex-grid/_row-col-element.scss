@@ -3,11 +3,15 @@
     box-sizing: border-box;
     display: flex;
     flex: 1 1 100%;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin-top: em(10);
     width: 100%;
+
+    @include media($tablet-portrait){
+        flex-direction: row;
+    }
 
     &.item-left {
         justify-content: flex-start;
@@ -129,4 +133,5 @@
     &.auto {
         flex: 0 0 auto;
     }
+
 }

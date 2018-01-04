@@ -61,6 +61,7 @@
         color: $textcolor;
         line-height: 1.6;
         margin-left: em(8);
+        display: inline;
 
         &.title {
             font-weight: bold;
@@ -84,5 +85,14 @@
 
     .labeltxt {
         color: $accent;
+
+    }
+
+    .row{
+        flex-direction: row;
+
+        @include media($tablet-portrait) {
+            flex-direction: row;
+        }
     }
 }

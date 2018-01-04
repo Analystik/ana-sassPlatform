@@ -1,0 +1,45 @@
+%list-temp{
+    display:block;
+    margin:0;
+    padding:0;
+    text-decoration:none;
+
+    &:hover{
+        curser:pointer;
+    }
+
+    &:first-of-type{
+        margin-top: em(10);
+    }
+
+    &:nth-child(odd){
+        background-color:$white;
+    }
+    &:nth-child(even){
+        border-bottom: 1px solid $input-border;
+        border-top: 1px solid $input-border;
+        background-color:$title-bar;
+    }
+
+    .row{
+        margin:0;
+        padding: em(10);
+
+        p{
+            padding:em(6);
+
+
+        &.total {
+            @extend %avenir-demibold;
+            box-sizing: border-box;
+            color: $black;
+            font-size: em(16);
+            padding: em(2);
+            text-align: right;
+            @include media($tablet-land) {
+                font-size: em(18);
+                }
+            }
+        }
+    }
+}

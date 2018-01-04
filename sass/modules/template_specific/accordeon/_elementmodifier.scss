@@ -16,7 +16,9 @@
         padding-bottom: em(16);
         text-transform: none;
 
-        &i {
+        icon {
+            color: $black;
+            font-size: em(13);
             transform: rotate(0);
             transform-origin: center;
             transition: transform .3s ease-in-out;
@@ -24,10 +26,14 @@
     }
 
     &.open {
-        h2 {
-            &i {
-                transform: rotate(180deg);
-            }
+        .icon {
+            transform: rotate(180deg);
+        }
+
+        div {
+            display: flex;
+            margin: em(20) 0;
+
         }
     }
 }
