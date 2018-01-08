@@ -1,5 +1,5 @@
 %checkbox {
-    @include flexbox(row, wrap, flex-start, flex-start);
+    @include flexbox(row, nowrap, flex-start, flex-start);
 
     label {
         @extend %label;
@@ -25,6 +25,7 @@
                 cursor: pointer;
                 display: flex;
                 height: 1em;
+                margin-top:6px; 
                 min-width: 0;
                 padding: 0;
                 transition: background-color .1s ease-in-out;
