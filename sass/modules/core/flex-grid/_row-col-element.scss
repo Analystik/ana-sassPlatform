@@ -9,7 +9,7 @@
     margin-top: em(10);
     width: 100%;
 
-    @include media($tablet-portrait){
+    @include media($tablet-portrait) {
         flex-direction: row;
     }
 

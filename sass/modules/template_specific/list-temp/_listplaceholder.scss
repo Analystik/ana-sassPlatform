@@ -1,43 +1,89 @@
-%list-temp{
-    display:block;
-    margin:0;
-    padding:0;
-    text-decoration:none;
+%list-temp {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 
-    &:hover{
-        curser:pointer;
+
+    &:nth-child(odd) {
+        background-color: $white;
     }
 
-    &:first-of-type{
-        margin-top: em(10);
-    }
-
-    &:nth-child(odd){
-        background-color:$white;
-    }
-    &:nth-child(even){
+    &:nth-child(even) {
+        background-color: $title-bar;
         border-bottom: 1px solid $input-border;
         border-top: 1px solid $input-border;
-        background-color:$title-bar;
     }
 
-    .row{
-        margin:0;
+    &:hover {
+        //sass-lint
+        background-color: rgba($accent, .2);// sass-lint:disable-line no-color-literals
+        cursor: pointer;
+
+    }
+
+
+    &:last-of-type {
+        border-bottom: 1px solid $accent;
+    }
+
+    .row {
+        margin: 0;
         padding: em(10);
 
-        p{
-            padding:em(6);
+        .col {
+            display: relative;
+            max-height: em(28);
 
 
-        &.total {
+            &:before {
+                color: $accent;
+                content: attr(data-title);
+                display: absolute;
+                left: 0;
+                padding-right: em(10);
+                text-align: left;
+                top: 0;
+                white-space: nowrap;
+                width: 25%;
+
+                @include media($tablet-portrait) {
+                    display: none;
+                }
+
+            }
+        }
+
+        &.header {
             @extend %avenir-demibold;
-            box-sizing: border-box;
-            color: $black;
-            font-size: em(16);
-            padding: em(2);
-            text-align: right;
-            @include media($tablet-land) {
-                font-size: em(18);
+            display: none;
+            @include media($tablet-portrait) {
+                background-color: $accent;
+                color: $white;
+                display: flex;
+                font-size: em(16);
+                margin-top: em(10);
+                text-transform: uppercase;
+
+                p {
+                    color: $white;
+                }
+            }
+        }
+
+        p {
+            padding: em(6);
+
+            &.total {
+                @extend %avenir-demibold;
+                box-sizing: border-box;
+                color: $black;
+                font-size: em(16);
+                padding: em(2);
+                text-align: right;
+
+                @include media($tablet-portrait) {
+                    font-size: em(18);
                 }
             }
         }

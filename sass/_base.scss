@@ -1,8 +1,0 @@
-.col{
-    &.small{
-        flex: 1 1 47%;
-        @include media($tablet-portrait) {
-            flex: 0 1 47%;
-        }
-    }
-}
